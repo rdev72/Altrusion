@@ -23,7 +23,8 @@ app.use(morgan('dev'))
 
 //Routes
 app.get('/',(req,res)=>{res.send(`<h1>This is IOT website</h1>`)})
-app.use('/data',(require('./routes/data')))
+app.use('/vibration',(require('./routes/vibration')))
+app.use('/tempAndNoise',(require('./routes/tempAndNoise')))
 
 
 const port = process.env.PORT || 3000
